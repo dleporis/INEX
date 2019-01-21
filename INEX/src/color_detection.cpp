@@ -30,6 +30,7 @@ public:
    image_pub_ = it_.advertise("/camera/image_processed", 1);
  }
 
+	//makes image from ros message accessible and editable by Open CV library
  void imageCb(const sensor_msgs::ImageConstPtr& msg){
    cv_bridge::CvImagePtr cv_ptr;
    try{
